@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Crimson Text', serif;
+    font-family: "stix-two-math", serif;
     background-color: #2D553C;
     color: #FFFFFF;
     min-height: 100vh;
