@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stanton Penn</title>
+    <link rel="stylesheet" href="Styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Images/SP.jpeg">
+    <link rel="stylesheet" href="https://use.typekit.net/ony5ecn.css">         
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">Stanton Penn</a>
+            <button class="menu-toggle" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobile-nav-overlay" id="mobileNav">
+            <div class="mobile-nav-header">
+                <a href="/" class="mobile-nav-logo">Stanton Penn</a>
+                <button class="mobile-nav-close" aria-label="Close navigation menu" tabindex="0" style="color: transparent; background: none; border: none; font-size: 0; line-height: 1;">
+                    <!-- No inner text or &times; here -->
+                </button>
+            </div>
+            <div class="mobile-nav-links">
+                <a href="/about">About us</a>
+                <a href="/careers">Careers</a>
+                <a href="/contact">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div>
+            <h1>About Us</h1>
+            <p>Stanton Penn is a leading provider of innovative solutions in the tech industry. Our mission is to deliver exceptional products and services that empower businesses and individuals to achieve their goals.</p>
+            <p>Founded in 2020, we have quickly established ourselves as a trusted partner for companies looking to enhance their digital presence and streamline their operations. Our team of experts is dedicated to providing top-notch support and guidance to help our clients succeed.</p>
+            <p>At Stanton Penn, we believe in the power of technology to transform lives and drive progress. We are committed to continuous improvement and innovation, ensuring that we stay at the forefront of the industry.</p>
+            <p>Whether you are a small business or a large enterprise, we have the expertise and resources to help you navigate the ever-changing tech landscape. Our comprehensive range of services includes software development, digital marketing, IT consulting, and more.</p>
+            <p>We take pride in our customer-centric approach, working closely with our clients to understand their unique needs and deliver tailored solutions.</p>
+            <p>Thank you for considering Stanton Penn as your technology partner.</p>
+        </div>
+
+        <div>
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Innovation:</strong> We strive to be at the cutting edge of technology, constantly seeking new ways to improve and innovate.</li>
+                <li><strong>Integrity:</strong> We conduct our business with honesty and transparency, building trust with our clients and partners.</li>
+                <li><strong>Excellence:</strong> We are committed to delivering high-quality products and services that exceed expectations.</li>
+                <li><strong>Collaboration:</strong> We believe in the power of teamwork, both within our company and with our clients.</li>
+            </ul>   
+        </div>
+
+        <h1>Our Team</h1>
+
+       
+        <div class="ourteam">
+            <div class="ourteam-arrow ourteam-arrow-left">
+                <button class="arrow arrow-left" aria-label="Previous" style="opacity: 0; pointer-events: none;">
+                    <svg width="32" height="32" viewBox="0 0 32 32">
+                        <polyline points="20,8 12,16 20,24" stroke="black" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="aboutus-cards">
+                <div class="aboutus-card" style="display: block;">
+                    <h1 class="name">Taran Gill</h1>
+                    <h2 class="title">Director</h2>
+                    <p></p>
+                </div>
+                <div class="aboutus-card" style="display: none;">
+                    <h1 class="name">Jai Kurbaan</h1>
+                    <h2 class="title">Chief Financial Officer</h2>
+                    <p></p>
+                </div>
+                <div class="aboutus-card" style="display: none;">
+                    <h1 class="name">Gurshaan Thind</h1>
+                    <h2 class="title">Chief Operating Officer</h2>
+                    <p></p>
+                </div>
+                <div class="aboutus-card" style="display: none;">
+                    <h1 class="name">Anmoldeep Hundal</h1>
+                    <h2 class="title">Cheif Information Officer</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="aboutus-arrow aboutus-arrow-right">
+                <button class="arrow arrow-right" aria-label="Next" style="opacity: 1;">
+                    <svg width="32" height="32" viewBox="0 0 32 32">
+                        <polyline points="12,8 20,16 12,24" stroke="black" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <a href="/" class="logo">Stanton Penn</a>
+                <div class="connect">
+                    <span>Connect</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <nav>
+                    <ul>
+                        <li><a href="/terms">Terms & Conditions</a></li>
+                        <li><a href="/cookies">Cookie Preferences</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('mobileNav').classList.toggle('active');
+            document.body.classList.toggle('nav-open');
+        });
+        document.querySelector('.mobile-nav-close').addEventListener('click', function() {
+            document.querySelector('.menu-toggle').classList.remove('active');
+            document.getElementById('mobileNav').classList.remove('active');
+            document.body.classList.remove('nav-open');
+        });
+        // Optional: close nav when clicking a link
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.menu-toggle').classList.remove('active');
+                document.getElementById('mobileNav').classList.remove('active');
+                document.body.classList.remove('nav-open');
+            });
+        });
+
+    
+    </script>
+</body>
+</html>

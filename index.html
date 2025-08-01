@@ -3,17 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stanton Penn - Partnerships that prosper</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://use.typekit.net/ony5ecn.css">
+    <title>Stanton Penn</title>
+    <link rel="stylesheet" href="Styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Images/SP.jpeg">
+    <link rel="stylesheet" href="https://use.typekit.net/ony5ecn.css">         
 </head>
 <body>
-    <div class="splash-container">
-        <div class="content">
-            <h1>Stanton Penn</h1>
-            <div class="divider"></div>
-            <h2>Partnerships that prosper</h2>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">Stanton Penn</a>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            </nav>
         </div>
-    </div>
+        <div class="mobile-nav-overlay" id="mobileNav">
+            <div class="mobile-nav-header">
+                <a href="/" class="mobile-nav-logo">Stanton Penn</a>
+                <button class="mobile-nav-close" aria-label="Close navigation menu" tabindex="0" style="color: transparent; background: none; border: none; font-size: 0; line-height: 1;">
+                    <!-- No inner text or &times; here -->
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="firstd">
+         <div class="firstd-content">
+             <div class="main-title">Stanton Penn</div>
+            <div class="divider"></div>
+            <div>Partnerships that prosper</div>
+         </div>
+        </div>
+
+        <div class="aboutus">
+            <div class="aboutus-arrow aboutus-arrow-left">
+                <button class="arrow arrow-left" aria-label="Previous" style="opacity: 0; pointer-events: none;">
+                    <svg width="32" height="32" viewBox="0 0 32 32">
+                        <polyline points="20,8 12,16 20,24" stroke="black" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="aboutus-cards">
+                <div class="aboutus-card" style="display: block;">
+                    <h1 class="name">Taran Gill</h1>
+                    <h2 class="title">Director</h2>
+                    <button class="more-info">More Info</button>
+                    <p></p>
+                </div>
+                <div class="aboutus-card" style="display: none;">
+                    <h1 class="name">Jai Kurbaan</h1>
+                    <h2 class="title">Chief Financial Officer</h2>
+                    <button class="more-info">More Info</button>
+                    <p></p>
+                </div>
+                <div class="aboutus-card" style="display: none;">
+                    <h1 class="name">Gurshaan Thind</h1>
+                    <h2 class="title">Chief Operating Officer</h2>
+                    <button class="more-info">More Info</button>
+                    <p></p>
+                </div>
+                <div class="aboutus-card" style="display: none;">
+                    <h1 class="name">Anmoldeep Hundal</h1>
+                    <h2 class="title">Cheif Information Officer</h2>
+                    <button class="more-info">More Info</button>
+                    <p></p>
+                </div>
+            </div>
+            <div class="aboutus-arrow aboutus-arrow-right">
+                <button class="arrow arrow-right" aria-label="Next" style="opacity: 1;">
+                    <svg width="32" height="32" viewBox="0 0 32 32">
+                        <polyline points="12,8 20,16 12,24" stroke="black" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="who">
+            <h1 class="who-title">Who We Are</h1>
+            <p class="who-description">Stanton Penn is a leading marketing agency, specialising in improving brands social media presence and rebranding. Our team provides high quality content for tailored for all business needs spanning from seasonal advertising campaigns to daily customer engagement posts.</p>
+            <p class="who-contact"></p>Interested in growing your business? Contact Stanton Penn now.</p>
+            <button class="contact-button">Email Us</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <a href="/" class="logo">Stanton Penn</a>
+                <div class="connect">
+                    <span>Connect</span>
+                    <nav class="footer-nav">
+                        <ul>
+                            <li><a href="https://www.linkedin.com/company/stanton-penn" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <li><a href="https://www.instagram.com/stantonpennltd/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <nav>
+                    <ul>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Cookie Preferences</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        // About Us Card Carousel with animation
+        const cards = document.querySelectorAll('.aboutus-card');
+        const leftArrow = document.querySelector('.arrow-left');
+        const rightArrow = document.querySelector('.arrow-right');
+        let currentCard = 0;
+        let animating = false;
+
+        function updateArrows(newIndex) {
+            // Fade arrows in/out based on card index
+            if (newIndex === 0) {
+                leftArrow.style.opacity = '0';
+                leftArrow.style.pointerEvents = 'none';
+            } else {
+                leftArrow.style.opacity = '1';
+                leftArrow.style.pointerEvents = 'auto';
+            }
+            if (newIndex === cards.length - 1) {
+                rightArrow.style.opacity = '0';
+                rightArrow.style.pointerEvents = 'none';
+            } else {
+                rightArrow.style.opacity = '1';
+                rightArrow.style.pointerEvents = 'auto';
+            }
+        }
+
+        function showCard(newIndex, direction) {
+            if (animating || newIndex === currentCard) return;
+            animating = true;
+            const oldCard = cards[currentCard];
+            const newCard = cards[newIndex];
+            // Remove all animation classes
+            cards.forEach(card => card.classList.remove('active', 'exit-left', 'exit-right', 'enter-left', 'enter-right'));
+            // Animate out old card
+            oldCard.classList.add(direction === 'right' ? 'exit-left' : 'exit-right');
+            oldCard.style.zIndex = 3;
+            // Prepare new card for entry but keep it hidden
+            newCard.style.display = 'block';
+            newCard.classList.remove('active');
+            newCard.classList.add(direction === 'right' ? 'enter-right' : 'enter-left');
+            newCard.style.zIndex = 2;
+            // Fade arrows in/out at the same time as card transition
+            updateArrows(newIndex);
+            // Wait for old card to finish animating out
+            setTimeout(() => {
+                oldCard.style.display = 'none';
+                oldCard.classList.remove('exit-left', 'exit-right');
+                // Animate in new card
+                newCard.classList.add('active');
+                newCard.classList.remove(direction === 'right' ? 'enter-right' : 'enter-left');
+                // Wait for new card to finish animating in
+                setTimeout(() => {
+                    cards.forEach((card, i) => {
+                        card.classList.remove('active', 'exit-left', 'exit-right', 'enter-left', 'enter-right');
+                        card.style.display = i === newIndex ? 'block' : 'none';
+                        card.style.zIndex = '';
+                    });
+                    newCard.classList.add('active');
+                    currentCard = newIndex;
+                    animating = false;
+                }, 800); // match CSS transition duration
+            }, 800); // match CSS transition duration
+        }
+
+        // Initial setup
+        cards.forEach((card, i) => {
+            card.classList.remove('active', 'exit-left', 'exit-right');
+            card.style.display = i === 0 ? 'block' : 'none';
+            if (i === 0) card.classList.add('active');
+        });
+        updateArrows(0);
+
+        leftArrow.addEventListener('click', () => {
+            if (currentCard > 0) {
+                showCard(currentCard - 1, 'left');
+            }
+        });
+        rightArrow.addEventListener('click', () => {
+            if (currentCard < cards.length - 1) {
+                showCard(currentCard + 1, 'right');
+            }
+        });
+    </script>
 </body>
 </html>
